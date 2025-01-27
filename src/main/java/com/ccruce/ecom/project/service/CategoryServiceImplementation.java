@@ -11,6 +11,7 @@ import com.ccruce.ecom.project.model.Category;
 public class CategoryServiceImplementation implements CategoryService{
 
     private List<Category> categories = new ArrayList<>();
+    private Long categoryId = (long) 1;
     
     @Override
     public List<Category> getAllCategories() {
@@ -20,6 +21,7 @@ public class CategoryServiceImplementation implements CategoryService{
 
     @Override
     public void createCategory(Category category) {
+        category.setCategoryId(categoryId++);
         categories.add(category);
     }
     

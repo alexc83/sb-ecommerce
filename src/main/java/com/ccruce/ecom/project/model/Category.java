@@ -2,8 +2,10 @@ package com.ccruce.ecom.project.model;
 
 public class Category {
 
-    public Category(Long categoryId, String categoryName) {
-        this.categoryId = categoryId;
+    private String categoryName;
+    private Long categoryId;
+
+    public Category(String categoryName) {
         this.categoryName = categoryName;
     }
 
@@ -23,6 +25,4 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    private Long categoryId;
-    private String categoryName;
 }
