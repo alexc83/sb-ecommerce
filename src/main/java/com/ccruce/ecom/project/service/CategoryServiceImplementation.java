@@ -49,7 +49,7 @@ public class CategoryServiceImplementation implements CategoryService{
 
     @Override
     public Category updateCategory(Category category, Long categoryId) {
-        List<Category> categories = categoryRepository.findAll();
+        List<Category> categories = categoryRepository.findById(categoryId);
         Optional<Category> optionalCategory = categories.stream()
             .filter(c -> c.getCategoryId().equals(categoryId))
             .findFirst();
